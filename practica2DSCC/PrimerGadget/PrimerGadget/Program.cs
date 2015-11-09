@@ -49,6 +49,7 @@ namespace PrimerGadget
             sdCard.Mounted += sdCard_Mounted;
            
             //camera.StopStreaming();
+            //Timer para simular el reinicio de la cámara
             timer = new GT.Timer(1500,GT.Timer.BehaviorType.RunOnce); // every second (1000ms)
             timer.Tick += timer_Tick;
                 
@@ -88,6 +89,7 @@ namespace PrimerGadget
 
         void camera_BitmapStreamed(Camera sender, Bitmap e)
         {   
+            //Funcion para visualizar la cámara
  	         displayT35.SimpleGraphics.DisplayImage(e,0,0);
         }
         
